@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    </head>
+
+    <body>
+        <video class="background" autoplay loop muted>
+            <source src="video/background-video.mp4" type="video/mp4">
+        </video>
+        <main class="container">
+            <h1 class="tittle-container">Encriptador de Texto</h1>
+            <div class="social-icons">
+                <a href="www.linkedin.com/in/john-alexander-contreras-ramírez-7b51181b6" target="_blank" class="social-icon"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/JohnContreras868/" target="_blank" class="social-icon"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <div class="row">
+                <section class="col-md-6">
+                    <h2>Encriptar</h2>
+                    <div class="text-container">
+                        <textarea id="input-text" class="form-control" placeholder="Ingrese el texto que desea encriptar">
+                        </textarea>
+                        <div class="warning-container">
+                            <div class="warning-circle"></div>
+                            <p class="warning-text">Solo letras minúsculas y sin acentos</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="encrypt-btn" class="btn btn-primary btn-interactive">Encriptar</button>
+                            <div class="button-separator"></div>
+                            <button id="decrypt-btn" class="btn btn-primary btn-interactive">Desencriptar</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-md-6">
+                    <h2>Texto Encriptado</h2>
+                    <div class="text-container">
+                        <textarea id="output-text" class="form-control" readonly></textarea>
+                        <div class="warning-container">
+                            <div></div> 
+                            <p><br></p>   
+                        </div>
+                        <div class="button-container">
+                            <button id="copy-btn" class="btn btn-success btn-interactive">Copiar</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+    
+    <script src="js/script.js"></script>
+
+</html>

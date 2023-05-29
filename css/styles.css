@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.tittle-container {
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.social-icons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 26px;
+    margin: 15px 0 0 15px;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-container {
+    margin-bottom: 20px;
+    position: relative; /* Posición relativa del contenedor para agregar efecto */
+    height: 360px; /* Agregar altura fija para evitar que se salga hacia abajo */
+}
+
+.text-container:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(214, 243, 248, 0.2);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.text-container:hover textarea {
+    transform: scale(1.01);
+}
+
+.text-container:hover:before {
+    transform: scale(0.5);
+    animation: expand 2s forwards;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#input-text,
+#output-text {
+    height: 360px;
+    background-color: rgba(12, 109, 244, 0.2); /* Color de fondo transparente */
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #fff;
+    font-size: 25px
+}
+
+.warning-container {
+display: flex;
+margin-top: 10px;
+}
+
+.warning-circle {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.warning-text {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* Espacio adicional entre los botones y el cuadro de texto */
+}
+
+.button-separator {
+    margin: 0 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 40px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btn-interactive {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: -4px 4px 10px rgba(241, 195, 12, 0.5);
+    /*Sombra para los botones*/
+}
+
+.btn-interactive:before,
+.btn-interactive:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.btn-interactive:before {
+    transform-origin: left center;
+}
+
+.btn-interactive:after {
+    transform-origin: right center;
+}
+
+.btn-interactive:hover {
+    color: #fff;
+}
+
+.btn-interactive:hover:before,
+.btn-interactive:hover:after {
+    transform: scale(1);
+}
+
+#encrypt-btn {
+    background-color: #f3b006;
+}
+
+.btn-primary.btn-interactive,
+.btn-primary.btn-interactive:hover {
+    background-color: #f3b006;
+    color: #fff;
+}
+
+.btn-success.btn-interactive,
+.btn-success.btn-interactive:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+
+
